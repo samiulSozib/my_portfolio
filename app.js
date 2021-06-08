@@ -47,7 +47,7 @@ const DB_NAME=process.env.DB_NAME
 mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@mycluster.oazue.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`,{useNewUrlParser:true,useUnifiedTopology:true})
 .then(()=>{
     console.log('database connect success')
-    app.listen(7444,()=>{
+    app.listen(PORT,()=>{
         console.log('Server is running on PORT 7444')
     })
 }).catch(e=>{
