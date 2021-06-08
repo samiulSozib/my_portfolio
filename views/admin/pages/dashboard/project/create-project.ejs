@@ -1,0 +1,90 @@
+<%- include('../../../partials/header.ejs') %> 
+
+<div class="container my-container my-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-body mx-5">
+                <h4>Create New Project</h4>
+                <form action="/project/create-project" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="title">Enter Project Title</label>
+                        <input type="text" placeholder="Enter Project Title" name="title" id="title" class="form-control <%= error.title?'is-invalid':'' %> ">
+                        <div class="invalid-feedback">
+                            <%= error.title %> 
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tiny-mce-post-body">Enter Your Post Body</label>
+                        <textarea name="body" id="tiny-mce-post-body" class="form-control <%= error.body?'is-invalid':'' %> " cols="30" rows="10">
+                            
+                        </textarea>
+                        <div class="invalid-feedback">
+                            <%= error.body %> 
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="index">Enter Project Index</label>
+                        <input type="number" placeholder="Enter Project Index" name="customIndex" id="customIndex" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Enter Project Category</label>
+                        <input type="text" placeholder="Enter Project Category" name="category" id="category" class="form-control">
+                    </div>
+
+                    <div class="input-group-mb-3">
+                        <div class="input-group-prepend my-2">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                        <div class="custom-file my-2">
+                            <input type="file" name="project-thumbnail" class="custom-file-input" id="inputGroupFile">
+                            <label for="inputGroupFile" class="custom-file-label">Choose File</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="lead">Your Social Link</p>
+        
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fab fa-internet-explorer"></i>
+                            </span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Live Project Link" name="liveShow">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="fab fa-github-square"></i>
+                              </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Github Link" name="githubLink">
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn btn-primary" value="Create Project">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../../partials/footer.ejs') %> 
+<script src="https://cdn.tiny.cloud/1/upwt06bkd22wjvd85hwgqgio2i717lcqw64ao14miyke0lyv/tinymce/5/tinymce.min.js"></script>
+<script src="/scripts/tinymce.js"></script>
+
+<script>
+    $('#inputGroupFile').on('change',function(e){
+        let filename=e.target.files[0].name
+        $(this).next('.custom-file-label').html(filename)
+    })
+    
+</script>
+
+
+    </body>
+</html>

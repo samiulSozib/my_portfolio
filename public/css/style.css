@@ -1,0 +1,78 @@
+body {
+  background: black;
+  color: #fff; }
+
+.navbar {
+  border-bottom: 3px solid white;
+  background: #292b2c;
+  opacity: 0.7; }
+
+#home-section {
+  background: url("../img/back.jpg") no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 650px; }
+  #home-section .dark-overlay {
+    background: rgba(0, 0, 0, 0.0);
+    min-height: 650px; }
+  #home-section .home-inner {
+    padding-top: 150px;
+    padding-bottom: 50px; }
+
+
+#about-head-section .card{
+  /* min-height: 300px; */
+  border-radius: 15px;
+  margin-top: -70px;
+}
+
+#services-section{
+  background-color: white;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.a-social-b{
+  position: fixed;
+  top: 50%;
+  right: 0px;
+  transform: translateX(-50%);
+}
+
+.a-social-b a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  margin: 0px;
+  line-height: 0px;
+  background-color: white;
+  border: 1px solid #cbcbcb;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.a-social-b i{
+  color: #2b2b2b;
+  font-size: 20px;
+}
+
+#footer{
+  /* background-image: url(/img/back.jpg); */
+  background-color: black;
+}
+/* .img-fluid{
+  display: block;
+  max-height: 50%;
+  width: 100%;
+} */
+
+.social-icons i{
+  color: white;
+}
+
+#project-list .container_body{
+  margin-top: 100px;
+}
+

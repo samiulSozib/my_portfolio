@@ -1,0 +1,53 @@
+<%- include('../partials/header.ejs') %>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+    <a class="navbar-brand font-italic" href="/">
+         Samiul Sozib</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="/">About</a>
+        <a class="nav-item nav-link" href="/">Services</a>
+        <a class="nav-item nav-link" href="/">Blog</a>
+        <a class="nav-item nav-link" href="/">Contact</a>
+        
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <section id="project-list" class="text-light">
+    <div class="container">
+      <div class="container_body">
+        <% if(!project){ %>
+            <p>There is No project Available</p>
+        <% }else{ %>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+              <% if(project.thumbnail){ %>
+                <img src="<%= project.thumbnail %> " class="card card-body img-fluid rounded mx-auto d-block" alt="project-image" width="250" height="250">
+              <% } %>  
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 text-left">
+              <h4><%= project.title %> </h4>
+              <p><%= project.category %> </p>
+            </div>
+          </div>
+          <section>
+            <div class="text-left mt-3">
+              <%- project.body %> 
+            </div>
+          </section>
+        <% } %>     
+      </div>
+      </div>
+    </div>
+</section>
+
+<%- include('../partials/footer.ejs') %>
+
+</body>
+</html>
