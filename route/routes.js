@@ -4,6 +4,7 @@ const projectRoute=require('./projectRoute')
 const uploadRoute=require('./uploadRoute')
 const userRoute=require('./user/userRoute')
 const projectRouter=require('./user/projectRoute')
+const portfolioRouter=require('./portfolioRoute')
 
 
 const routes=[
@@ -26,6 +27,10 @@ const routes=[
     {
         path:'/project-list',
         handler:projectRouter
+    },
+    {
+        path:'/portfolio',
+        handler:portfolioRouter
     },
     {
         path:'/',

@@ -8,13 +8,22 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <% if(isLoggedIn){ %> 
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/portfolio">Portfolio Info</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Portfolio</a>
+                </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="/dashboard">Dashboard</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/project/create-project">Create Project</a>
                 </li>
-  
+                
   
                 <li class="nav-item">
                   <a class="nav-link btn btn-danger" href="/admin-auth/signout">Logout</a>
