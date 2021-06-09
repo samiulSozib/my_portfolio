@@ -14,7 +14,10 @@ app.post('/',(req,res)=>{
     console.log(req.body)
 
     var transporter=nodemailer.createTransport({
-        service:'gmail',
+        host:'https://samiul-portfolio.herokuapp.com/',
+        port:587,
+        secure:false,
+        //service:'gmail',
         auth:{
             user:process.env.email,
          pass:process.env.pass
@@ -22,10 +25,10 @@ app.post('/',(req,res)=>{
     })
 
     var mailOPtion={
-        from:req.body.email,
+        from:'samiuljust2018@gmail.com',
         to:'blogandportfolio@gmail.com',
         subject:'Demo Gamil',
-        text:req.body.comment
+        text:req.body.comment+" "+req.body.email
     }
 
     transporter.sendMail(mailOPtion,(error,info)=>{
