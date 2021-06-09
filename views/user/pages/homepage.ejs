@@ -9,8 +9,8 @@
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 py-2">
                   <h5 class="display-5">Hello</h5>
-                  <h3 class="display-4 font-weight-bold animate__animated animate__backInLeft wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">I'M SAMIUL</h3>
-                  <h4 class="lead animate__animated animate__backInRight wow slideInRight">I am a Software Engineer</h4>
+                  <h3 class="display-4 font-weight-bold animate__animated animate__backInLeft wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s"><%= details.title_name %> </h3>
+                  <h4 class="lead animate__animated animate__backInRight wow slideInRight"><%= details.title_description %></h4>
                   <button class="btn btn-secondary">Download CV</button>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 py-2">
@@ -44,8 +44,8 @@
             <div class="col-lg-8 col-md-8 col-sm-12 py-1">
               <div class="card-body">
                 <h3 class="display-5 font-weight-bold">About Me</h3>
-                <h4 class="display-6">Android and Backend Developer</h4>
-                <p class="lead text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quasi recusandae corporis obcaecati tenetur dolor, animi ullam laboriosam fugit atque, veniam enim id nesciunt tempore officiis pariatur assumenda officia ipsa?</p>
+                <h4 class="display-6"><%= details.about_title %></h4>
+                <p class="lead text-justify"><%= details.about_description %> </p>
                 <button class="btn btn-secondary">Download CV</button>
               </div>
             </div>
@@ -62,7 +62,7 @@
           <div class="col-lg-12 col-md-12 col-sm-12">
             <h3 class="font-weight-bold display-5">Services</h3>
             <h4 class="display-6">Services Required</h4>
-            <p class="lead text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, iste. Mollitia, culpa deleniti! Magni beatae deleniti quod nostrum pariatur labore in, harum placeat eius repudiandae delectus explicabo maxime sunt sint!</p>
+            <p class="lead text-justify"><%= details.service_description %></p>
 
           </div>
         </div>
@@ -70,21 +70,21 @@
           <div class="col-lg-4 py-1">
             <div class="card card-body animate__animated animate__backInLeft wow slideInLeft">
               <h3 class="display-5">Android</h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aperiam sunt corporis itaque tempora expedita ut ipsam iste, maiores nobis repellat libero consectetur? Consequuntur fugiat, vel cumque commodi est sed!</p>
-              <a href="/project-list/android" class="btn btn-secondary">Project</a>
+              <p class="lead"><%= details.android_description %></p>
+                 <a href="/project-list/android" class="btn btn-secondary">Project</a>
             </div>
           </div>
           <div class="col-lg-4 py-1">
             <div class="card card-body">
               <h3 class="display-5">Web</h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aperiam sunt corporis itaque tempora expedita ut ipsam iste, maiores nobis repellat libero consectetur? Consequuntur fugiat, vel cumque commodi est sed!</p>
+              <p class="lead"><%= details.web_description %></p>
               <a href="/project-list/web" class="btn btn-secondary">Project</a>
             </div>
           </div>
           <div class="col-lg-4 py-1">
             <div class="card card-body animate__animated animate__backInRight wow slideInRight">
               <h3 class="display-5">All</h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aperiam sunt corporis itaque tempora expedita ut ipsam iste, maiores nobis repellat libero consectetur? Consequuntur fugiat, vel cumque commodi est sed!</p>
+              <p class="lead"><%= details.all_description %></p>
               <a href="/project-list/all" class="btn btn-secondary">Project</a>
             </div>
           </div>
