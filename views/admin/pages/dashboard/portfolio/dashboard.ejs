@@ -1,22 +1,22 @@
 <%- include('../../../partials/header.ejs') %> 
 
 <div class="container my-container">
-    <a class="btn btn-primary" href="/portfolio/update-details">Edit Details</a>
+    <a class="btn btn-primary" href="/portfolio/update-details/<%= details.id %>">Edit Details</a>
     <div class="card mt-2">
         <div class="card-body">
-            <h5 class="lead">Nav Title : Samiul Bashar</h5><hr>
-            <h5 class="lead">Title Name: Samiul Bashar</h5><hr>
-            <h5 class="lead">Title Description: Samiul Bashar</h5><hr>
-            <h5 class="lead">Fb : Samiul Bashar</h5><hr>
-            <h5 class="lead">Git : Samiul Bashar</h5><hr>
-            <h5 class="lead">LinkedIn : Samiul Bashar</h5><hr>
-            <h5 class="lead">About Title : Samiul Bashar</h5><hr>
-            <h5 class="lead">About Description : Samiul Bashar</h5><hr>
-            <h5 class="lead">Service Description : Samiul Bashar</h5><hr>
-            <h5 class="lead">Android Description : Samiul Bashar</h5><hr>
-            <h5 class="lead">Wev Description : Samiul Bashar</h5><hr>
-            <h5 class="lead">All Description : Samiul Bashar</h5><hr>
-            <h5 class="lead">Email : Samiul Bashar</h5><hr>
+            <h5 class="lead"><strong>Nav Title :</strong> <%= details.nav_title %> </h5><hr>
+            <h5 class="lead"><strong>Title Name:</strong> <%= details.title_name %> </h5><hr>
+            <h5 class="lead"><strong>Title Description:</strong> <%= details.title_description %></h5><hr>
+            <h5 class="lead"><strong>Fb :</strong> <%= details.fb_link %></h5><hr>
+            <h5 class="lead"><strong>Git :</strong> <%= details.git_link %></h5><hr>
+            <h5 class="lead"><strong>LinkedIn :</strong> <%= details.linkedin_link %></h5><hr>
+            <h5 class="lead"><strong>About Title :</strong> <%= details.about_title %></h5><hr>
+            <h5 class="lead"><strong>About Description :</strong> <%= details.about_description %></h5><hr>
+            <h5 class="lead"><strong>Service Description :</strong> <%= details.service_description %></h5><hr>
+            <h5 class="lead"><strong>Android Description :</strong> <%= details.android_description %></h5><hr>
+            <h5 class="lead"><strong>Web Description :</strong> <%= details.web_description %></h5><hr>
+            <h5 class="lead"><strong>All Description :</strong> <%= details.all_description %></h5><hr>
+            <h5 class="lead"><strong>Email :</strong> <%= details.email %></h5><hr>
         </div>
     </div>
 </div>

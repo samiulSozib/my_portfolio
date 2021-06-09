@@ -3,52 +3,55 @@ const {Schema,model}=require('mongoose')
 const detailsSchema=new Schema({
     nav_title:{
         type:String,
-        required:true
+        //required:true
     },
     title_name:{
         type:String,
-        required:true
+        //required:true
     },
     title_description:{
         type:String,
-        required:true
+        //required:true
     },
-    facebook_link:{
+    fb_link:{
         type:String,
-        required:true
+        //required:true
     },
-    github_link:{
+    git_link:{
         type:String,
-        required:true
+        //required:true
     },
     linkedin_link:{
         type:String,
-        required:true
+        //required:true
     },
     about_title:{
         type:String,
-        required:true
+        //required:true
     },
     about_description:{
         type:String,
-        required:true
+        //required:true
     },
     service_description:{
         type:String,
-        required:true
+        //required:true
     },
     web_description:{
         type:String,
-        required:true
+        //required:true
     },
     android_description:{
         type:String,
-        required:true
+        //required:true
     },
     all_description:{
         type:String,
-        required:true
+        //required:true
     },
+    email:{
+        type:String
+    }
 },{
     timestamps:true
 })

@@ -5,71 +5,77 @@
         <div class="col-md-12">
             <div class="card card-body mx-5">
                 <h5>Edit Details</h5>
-                <form action="/portfolio/update-details" method="POST">
+                <form action="/portfolio/update-details/<%= details._id %>" method="POST">
 
                     <div class="form-group">
                         <label for="nav_title">Enter Nav Title</label>
-                        <input type="text" placeholder="Enter Nav Title" name="nav_title" id="nav_title" class="form-control">
+                        <input type="text" placeholder="Enter Nav Title" name="nav_title" id="nav_title" class="form-control" value="<%= details.nav_title %>">
                     </div>
 
                     <div class="form-group">
                         <label for="title_name">Enter Title Name</label>
-                        <input type="text" placeholder="Enter Title Name" name="title_name" id="title_name" class="form-control">
+                        <input type="text" placeholder="Enter Title Name" name="title_name" id="title_name" class="form-control" value="<%= details.title_name %>">
                     </div>
 
                     <div class="form-group">
                         <label for="title_description">Enter Title Description</label>
-                        <textarea name="title_description" id="title_description" cols="30" rows="3" class="form-control"></textarea>
+                        <textarea name="title_description" id="title_description" cols="30" rows="3" class="form-control"><%= details.title_description %> 
+                        </textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="fb_link">Enter Facebook Link</label>
-                        <input type="text" placeholder="Enter Facebook Link" name="fb_link" id="fb_link" class="form-control">
+                        <input type="text" placeholder="Enter Facebook Link" name="fb_link" id="fb_link" class="form-control" value="<%= details.fb_link %>">
                     </div>
 
                     <div class="form-group">
                         <label for="git_link">Enter Git Link</label>
-                        <input type="text" placeholder="Enter Git Link" name="git_link" id="git_link" class="form-control">
+                        <input type="text" placeholder="Enter Git Link" name="git_link" id="git_link" class="form-control" value="<%= details.git_link %>">
                     </div>
 
                     <div class="form-group">
                         <label for="linkedin_link">Enter LinkedIn Link</label>
-                        <input type="text" placeholder="Enter LinkedIn Link" name="linkedin_link" id="linkedin_link" class="form-control">
+                        <input type="text" placeholder="Enter LinkedIn Link" name="linkedin_link" id="linkedin_link" class="form-control" value="<%= details.linkedin_link %>">
                     </div>
 
                     <div class="form-group">
                         <label for="about_title">Enter About Title</label>
-                        <input type="text" placeholder="Enter About Title" name="about_title" id="about_title" class="form-control">
+                        <input type="text" placeholder="Enter About Title" name="about_title" id="about_title" class="form-control" value="<%= details.about_title %>">
                     </div>
 
                     <div class="form-group">
                         <label for="about_description">Enter About Description</label>
-                        <textarea name="about_description" id="about_description" cols="30" rows="3" class="form-control"></textarea>
+                        <textarea name="about_description" id="about_description" cols="30" rows="3" class="form-control"><%= details.about_description %> 
+                        </textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="servide_description">Enter Service Description</label>
-                        <textarea name="servide_description" id="servide_description" cols="30" rows="3" class="form-control"></textarea>
+                        <label for="service_description">Enter Service Description</label>
+                        <textarea name="service_description" id="service_description" cols="30" rows="3" class="form-control"><%= details.service_description %> 
+                        </textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="android_description">Enter Android Description</label>
-                        <textarea name="android_description" id="android_description" cols="30" rows="3" class="form-control"></textarea>
+                        <textarea name="android_description" id="android_description" cols="30" rows="3" class="form-control"><%= details.android_description %> 
+                        </textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="web_description">Enter Web Description</label>
-                        <textarea name="web_description" id="web_description" cols="30" rows="3" class="form-control"></textarea>
+                        <textarea name="web_description" id="web_description" cols="30" rows="3" class="form-control"><%= details.web_description %> 
+                        </textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="all_description">Enter All Description</label>
-                        <textarea name="all_description" id="all_description" cols="30" rows="3" class="form-control"></textarea>
+                        <textarea name="all_description" id="all_description" cols="30" rows="3" class="form-control"><%= details.all_description %> 
+                        </textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Enter Email</label>
-                        <input type="text" placeholder="Enter Email" name="email" id="email" class="form-control">
+                        <input type="text" placeholder="Enter Email" name="email" id="email" class="form-control" value="<%= details.email %>">
                     </div>
 
                     <input type="submit" class="btn btn-primary" value="Update Details">

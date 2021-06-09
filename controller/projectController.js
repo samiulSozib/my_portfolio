@@ -75,7 +75,7 @@ exports.editProjectGetController=async(req,res,next)=>{
             error:{},
             project
         })
-
+ 
     }catch(e){
         console.log(e)
         next(e)
