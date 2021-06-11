@@ -1,5 +1,6 @@
 const Project=require('../../model/project')
-
+const Details=require('../../model/details')
+ 
 exports.getProjectpageController=async(req,res,next)=>{
     let categoryId=req.params.categoryId
     let project;
@@ -7,11 +8,15 @@ exports.getProjectpageController=async(req,res,next)=>{
         if(categoryId=="all"){
             project=await Project.find()
         }else{
+            
             project=await Project.find({category:categoryId})
         }
         //let project=await Project.find()
+        let _details=await Details.find()
+        let details=_details[0]
+
         console.log(project)
-        res.render('user/pages/project_list',{project})
+        res.render('user/pages/project_list',{project,details})
 
     }catch(e){
         next(e)
@@ -28,8 +33,10 @@ exports.getSingleProject=async(req,res,next)=>{
         if(!project){
             console.log("no project")
         }
+        let _details=await Details.find()
+        let details=_details[0]
         console.log(project)
-        res.render('user/pages/single_project',{project})
+        res.render('user/pages/single_project',{project,details})
         
     }catch(e){
         next(e)
